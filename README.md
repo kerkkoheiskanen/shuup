@@ -12,8 +12,9 @@ Business Address: Iso-Roobertinkatu 20-22, 00120 HELSINKI, Finland.
 
 ## License
 
-Shuup is published under Open Software License version 3.0 (OSL-3.0).
-See the LICENSE file distributed with Shuup.
+This source code is licensed under the SHUUP™ ENTERPRISE EDITION -
+END USER LICENSE AGREEMENT executed by Anders Innovations Inc. DBA as Shuup
+and the Licensee.
 
 
 ## Steps to install this project:
