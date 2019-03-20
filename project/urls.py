@@ -6,11 +6,11 @@
 # This source code is licensed under the SHUUP® ENTERPRISE EDITION -
 # END USER LICENSE AGREEMENT executed by Anders Innovations Inc. DBA as Shuup
 # and the Licensee.
-from django.http import HttpResponseRedirect
-from django.conf.urls import include, url
 from django.conf import settings
+from django.conf.urls import include, url
 from django.conf.urls.static import static
 from django.core.urlresolvers import reverse
+from django.http import HttpResponseRedirect
 
 from shuup.admin.modules.products.views import ProductMediaBulkAdderView
 from shuup.admin.views.dashboard import DashboardView

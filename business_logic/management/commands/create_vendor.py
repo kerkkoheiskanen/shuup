@@ -15,9 +15,7 @@ from django.core.management import BaseCommand
 from django.utils.text import slugify
 from django.utils.translation import activate
 
-from shuup.core.models import (
-    get_person_contact, Shop, ShopProduct, Supplier
-)
+from shuup.core.models import get_person_contact, Shop, ShopProduct, Supplier
 from shuup_multivendor.models import SupplierPrice, SupplierUser
 
 

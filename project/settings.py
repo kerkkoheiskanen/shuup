@@ -13,6 +13,7 @@ import environ
 
 env = environ.Env(DEBUG=(bool, False))
 
+
 def optenv(var):
     return env(var, default=None)
 
