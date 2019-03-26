@@ -277,6 +277,7 @@ SHUUP_PROVIDES_BACKLIST = {
 
 # Shuup (shuup.admin)
 SHUUP_ADMIN_SHOP_PROVIDER_SPEC = ("business_logic.admin_shop_provider.AdminShopProvider")
+SHUUP_ADMIN_SUPPLIER_PROVIDER_SPEC = "shuup_multivendor.supplier_provider.MultivendorSupplierProvider"
 
 # Shuup (shuup.front)
 SHUUP_CHECKOUT_VIEW_SPEC = ("business_logic.views:CheckoutViewWithLoginAndRegisterVertical")
