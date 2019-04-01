@@ -70,14 +70,15 @@ rauth==0.7.3              # via python-quickbooks
 raven==6.10.0
 requests==2.21.0
 setuptools-gitver==1.1.0  # via shuup-cms-blog, shuup-definite-theme, shuup-megastore-theme, shuup-product-comparison, shuup-product-reviews, shuup-stripe-subscriptions, shuup-subscriptions, shuup-wishlist, shuup-yaml
-shuup==1.9.2b7
+shuup==1.9.3b1
 shuup-can-taxes==0.4.1
 shuup-category-organizer==0.2.0
 shuup-cms-blog==0.2.1
 shuup-definite-theme==1.3.3
 shuup-mailchimp==1.0.1
 shuup-megastore-theme==2.2.1
-shuup-multivendor==0.4.7
+shuup-multivendor==0.5.3
+shuup-packages==1.4.12
 shuup-product-comparison==0.2.4
 shuup-product-reviews==0.3.0
 shuup-quickbooks==0.1.2

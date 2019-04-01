@@ -235,43 +235,11 @@ USA_TAX_DEFAULT_TAX_IDENTIFIER = CAN_TAX_DEFAULT_TAX_IDENTIFIER = "Default tax c
 USA_TAX_ADDITIONAL_TAX_CLASS_IDENTIFIERS = []
 
 SHUUP_PROVIDES_BACKLIST = {
-    # From Shuup testing
-    "service_provider_admin_form": [
-        "shuup.testing.service_forms:PseudoPaymentProcessorForm",
-        "shuup.testing.service_forms:PaymentWithCheckoutPhaseForm",
-        "shuup.testing.service_forms:CarrierWithCheckoutPhaseForm",
-    ],
-    "front_service_checkout_phase_provider": [
-        "shuup.testing.simple_checkout_phase.PaymentPhaseProvider",
-        "shuup.testing.simple_checkout_phase.ShipmentPhaseProvider",
-    ],
-    "admin_contact_toolbar_button": [
-        "shuup.testing.admin_module.toolbar:MockContactToolbarButton",
-    ],
-    "admin_contact_toolbar_action_item": [
-        "shuup.testing.admin_module.toolbar:MockContactToolbarActionItem",
-    ],
-    "admin_contact_edit_toolbar_button": [
-        "shuup.testing.admin_module.toolbar:MockContactToolbarButton",
-    ],
-    "admin_product_toolbar_action_item": [
-        "shuup.testing.admin_module.toolbar:MockProductToolbarActionItem",
-    ],
-    "admin_contact_section": [
-        "shuup.testing.admin_module.sections:MockContactSection",
-    ],
-    "xtheme": [
-        "shuup.testing.themes:ShuupTestingTheme",
-        "shuup.testing.themes:ShuupTestingThemeWithCustomBase",
-    ],
-
-    # Do not allow importing contacts
-    "importers": [
-        "shuup.default_importer.importers.PersonContactImporter",
-        "shuup.default_importer.importers.CompanyContactImporter"
-    ],
     "admin_module": [
         "shuup.admin.modules.support:ShuupSupportModule"
+    ],
+    "admin_order_section": [
+        "shuup.admin.modules.orders.sections:BasicDetailsOrderSection",
     ]
 }
 
@@ -337,12 +305,3 @@ SHUUP_PACKAGES_AUTO_ATTACH_PRE_PACKS_TO_ORDER = True
 # nobody browsing for 30 min all caches need to rebuild.
 SHUUP_TEMPLATE_HELPERS_CACHE_DURATION = 60*420
 SHUUP_DEFAULT_CACHE_DURATION = 60*420
-
-SHUUP_PROVIDES_BLACKLIST = {
-    "admin_order_section": [
-        "shuup.admin.modules.orders.sections:BasicDetailsOrderSection",
-    ],
-    "reports": [
-        "packages.reports:CannabisComplianceReport"
-    ]
-}
