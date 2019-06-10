@@ -205,7 +205,7 @@ TEMPLATES = [
     },
 ]
 
-#CACHES = {'default': env.cache(default='memcache://127.0.0.1:11211')}
+CACHES = {'default': env.cache(default='memcache://127.0.0.1:11211')}
 
 SHUUP_SETUP_WIZARD_PANE_SPEC = []  # TODO: fix these
 

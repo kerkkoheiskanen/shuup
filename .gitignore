@@ -69,3 +69,5 @@ target/
 
 multivendor_admin/static/multivendor_admin/css/*
 multivendor_admin/static/multivendor_admin/js/*
+
+*.code-workspace
