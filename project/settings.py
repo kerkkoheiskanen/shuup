@@ -108,6 +108,7 @@ INSTALLED_APPS = BASE_APPS + [
     'shuup_mailchimp',
     'shuup_typography',
     'shuup_paypal_capture',
+    'shuup.gdpr',
 
     # Externals
     'raven.contrib.django.raven_compat',
