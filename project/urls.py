@@ -14,6 +14,7 @@ from django.http import HttpResponseRedirect
 
 from shuup.admin.modules.products.views import ProductMediaBulkAdderView
 from shuup.admin.views.dashboard import DashboardView
+from shuup.core.utils.maintenance import maintenance_mode_exempt
 
 
 def not_vendor(view):
@@ -30,7 +31,7 @@ urlpatterns = [
         r"^sa/products/(?P<pk>\d+)/media/add/$",
         ProductMediaBulkAdderView.as_view(),
         name="shop_product.add_media_sa"),  # TODO: Revise! Shouldn't be needed.
-    url(r'^admin/$', not_vendor(DashboardView.as_view()), name='dashboard'),
+    url(r'^admin/$', maintenance_mode_exempt(not_vendor(DashboardView.as_view())), name='dashboard'),
     url(r"^admin/", include("shuup.admin.urls", namespace="shuup_admin", app_name="shuup_admin")),
     url(r"^", include("shuup.front.urls", namespace="shuup", app_name="shuup"))
 ]
