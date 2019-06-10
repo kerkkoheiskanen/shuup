@@ -79,6 +79,7 @@ shuup-mailchimp==1.0.1
 shuup-megastore-theme==2.2.1
 shuup-multivendor==0.7.3
 shuup-packages==1.4.12
+shuup-paypal-capture==0.0.2
 shuup-product-comparison==0.2.8
 shuup-product-reviews==0.3.7
 shuup-quickbooks==0.1.2
