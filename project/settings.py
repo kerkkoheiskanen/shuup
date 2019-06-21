@@ -104,7 +104,6 @@ INSTALLED_APPS = BASE_APPS + [
     'shuup_stripe_connect',
     'shuup_cms_blog',
     'shuup.api',
-    'packages',
     'shuup_mailchimp',
     'shuup_typography',
     'shuup_paypal_capture',
@@ -294,11 +293,6 @@ REST_FRAMEWORK = {
         'shuup.api.permissions.ShuupAPIPermission',
     )
 }
-
-# Suup Packages
-SHUUP_PACKAGES_SUPPLIER_STRATEGY = "business_logic.supplier_strategy:CloudSupplierStrategy"
-SHUUP_PACKAGES_SUPPLIER_USERS_STRATEGY = "business_logic.supplier_strategy:CloudSupplierUserStrategy"
-SHUUP_PACKAGES_AUTO_ATTACH_PRE_PACKS_TO_ORDER = True
 
 # Adjust default caches for demos so the bumping get better
 # tests. Also ususally with demo there is not enough traffic
