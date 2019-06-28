@@ -19,7 +19,10 @@ from shuup.core.utils.maintenance import maintenance_mode_exempt
 
 def not_vendor(view):
     def f(request, *args, **kwargs):
-        if getattr(request.user, "is_superuser", False):
+        user = request.user
+        is_superuser = getattr(user, "is_superuser", False)
+        is_staff_member = request.shop and request.shop.staff_members.filter(id=user.id).exists()
+        if is_superuser or is_staff_member:
             return view(request, *args, **kwargs)
         return HttpResponseRedirect(reverse("shuup_admin:shuup_multivendor.dashboard.supplier"))
     return f
