@@ -15,7 +15,7 @@ coreschema==0.0.4         # via coreapi
 cssselect2==0.2.1         # via cairosvg, weasyprint
 defusedxml==0.5.0         # via cairosvg
 dj-database-url==0.5.0
-django==1.11.20
+django==1.11.23
 django-bootstrap3==9.1.0  # via shuup
 django-countries==5.2     # via shuup
 django-enumfields==0.9.0  # via shuup
@@ -69,14 +69,14 @@ rauth==0.7.3              # via python-quickbooks
 raven==6.10.0
 requests==2.21.0
 setuptools-gitver==1.1.0  # via shuup-cms-blog, shuup-definite-theme, shuup-megastore-theme, shuup-product-comparison, shuup-product-reviews, shuup-stripe-subscriptions, shuup-subscriptions, shuup-wishlist, shuup-yaml
-shuup==1.9.7
+shuup==1.9.10b1
 shuup-can-taxes==0.4.1
 shuup-category-organizer==0.2.0
 shuup-cms-blog==0.3.0
 shuup-definite-theme==1.3.10
 shuup-mailchimp==1.0.2
 shuup-megastore-theme==2.2.1
-shuup-multivendor==0.7.6
+shuup-multivendor==0.7.12
 shuup-paypal-capture==0.0.2
 shuup-product-comparison==0.2.8
 shuup-product-reviews==0.3.7
