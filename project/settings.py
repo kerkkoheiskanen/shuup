@@ -108,6 +108,8 @@ INSTALLED_APPS = BASE_APPS + [
     'shuup_typography',
     'shuup_paypal_capture',
     'shuup.gdpr',
+    'shuup_logging',
+    'shuup.testing',
 
     # Externals
     'raven.contrib.django.raven_compat',
@@ -234,13 +236,50 @@ SHUUP_REQUEST_SHOP_PROVIDER_SPEC = ("business_logic.core_shop_provider.DefaultSh
 USA_TAX_DEFAULT_TAX_IDENTIFIER = CAN_TAX_DEFAULT_TAX_IDENTIFIER = "Default tax class"
 USA_TAX_ADDITIONAL_TAX_CLASS_IDENTIFIERS = []
 
-SHUUP_PROVIDES_BACKLIST = {
+SHUUP_PROVIDES_BLACKLIST = {
     "admin_module": [
-        "shuup.admin.modules.support:ShuupSupportModule"
+        "shuup.admin.modules.support:ShuupSupportModule",
+        "shuup.testing.modules.sample_data:SampleDataAdminModule",
+        "shuup.testing.modules.demo:DemoModule",
     ],
     "admin_order_section": [
         "shuup.admin.modules.orders.sections:BasicDetailsOrderSection",
-    ]
+    ],
+    "service_provider_admin_form": [
+        "shuup.testing.service_forms:PseudoPaymentProcessorForm",
+        "shuup.testing.service_forms:PaymentWithCheckoutPhaseForm",
+        "shuup.testing.service_forms:CarrierWithCheckoutPhaseForm",
+    ],
+    "front_service_checkout_phase_provider": [
+        "shuup.testing.simple_checkout_phase.PaymentPhaseProvider",
+        "shuup.testing.simple_checkout_phase.ShipmentPhaseProvider",
+    ],
+    "admin_contact_toolbar_button": [
+        "shuup.testing.modules.mocker.toolbar:MockContactToolbarButton",
+    ],
+    "admin_contact_toolbar_action_item": [
+         "shuup.testing.modules.mocker.toolbar:MockContactToolbarActionItem",
+    ],
+    "admin_contact_edit_toolbar_button": [
+        "shuup.testing.modules.mocker.toolbar:MockContactToolbarButton",
+    ],
+    "admin_product_toolbar_action_item": [
+        "shuup.testing.modules.mocker.toolbar:MockProductToolbarActionItem",
+    ],
+    "admin_contact_section": [
+        "shuup.testing.modules.mocker.sections:MockContactSection",
+    ],
+    "importers": [
+        "shuup.testing.importers.DummyImporter",
+        "shuup.testing.importers.DummyFileImporter"
+    ],
+    "xtheme": [
+        __name__ + ".themes:ShuupTestingTheme",
+        __name__ + ".themes:ShuupTestingThemeWithCustomBase",
+    ],
+    "pricing_module": [
+        "shuup.testing.supplier_pricing.pricing:SupplierPricingModule"
+    ],
 }
 
 # Shuup (shuup.admin)
@@ -300,3 +339,7 @@ REST_FRAMEWORK = {
 # nobody browsing for 30 min all caches need to rebuild.
 SHUUP_TEMPLATE_HELPERS_CACHE_DURATION = 60*420
 SHUUP_DEFAULT_CACHE_DURATION = 60*420
+
+SHUUP_LOGGING_ENABLE_BASIC_LOGGING = True
+SHUUP_LOGGING_SKIP_MENU_ENTRY_URL_NAMES = []
+SHUUP_NOTIFY_SCRIPT_RUNNER = "business_logic.script_runner.run_event"

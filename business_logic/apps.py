@@ -14,3 +14,6 @@ class AppConfig(shuup.apps.AppConfig):
     verbose_name = "Business Logic"
     label = "business_logic"
     provides = {}
+
+    def ready(self):
+        import business_logic.logging  # noqa
