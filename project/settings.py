@@ -59,12 +59,12 @@ BASE_APPS = [
 
 INSTALLED_APPS = BASE_APPS + [
     # Shuup
+    'business_logic',
     'shuup.themes.classic_gray',
     'shuup_definite_theme',
     'shuup_megastore_theme',
     'shuup_multivendor',  # Overrides base for fun
     'shuup.admin',
-    'business_logic',
     'shuup.core',
     'shuup.default_tax',
     'shuup.front',
