@@ -28,9 +28,6 @@ class Command(BaseCommand):
     def handle(self, *args, **options):
         activate(settings.PARLER_DEFAULT_LANGUAGE_CODE)
 
-        # multivendor requirement
-        call_command("populate_multivendor_permissions")
-
         create_default_order_statuses()
 
         ProductType.objects.update_or_create(identifier="default", defaults=dict(
