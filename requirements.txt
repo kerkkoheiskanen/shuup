@@ -89,7 +89,7 @@ shuup-stripe-connect==0.1.1
 shuup-stripe-subscriptions==1.4.2
 shuup-subscriptions==2.2.4
 shuup-typography==1.0.0
-shuup-us-taxes==0.7.1
+shuup-us-taxes==0.7.2
 shuup-wishlist==0.4.10
 shuup-xtheme-extra-layouts==0.9.3
 shuup-yaml==1.0.1b2
