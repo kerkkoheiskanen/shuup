@@ -85,6 +85,29 @@ run `python setup.py build_resources` for your "shuup-packages". This is
 important when in development mode.
 
 
+## Development with this repository and Shuup with Docker
+
+
+1.0 Create a shuup-packages folder on the same level with shuup-sandbox
+ 1.1 git clone Shuup and Shuup Addons in the shuup-packages folder
+
+2.0 Replace the placeholder in docker-compose.yml file under the "django -> volumes" where it says `<shuup-packages FOLDER PATH HERE>` with your shuup-packages path
+
+3.0 Run `docker-compose up --build`
+
+4.0 Run `docker exec -it sandbox bash`
+  4.1 Run `bash update-dev-project.sh shuup-packages` inside the container to install requirements from requirements.txt and locally from shuup-packages
+
+5.0 Setup environment variables
+
+6.0 Django stuff
+  6.1 Run `python manage.py migrate` to prime the database.
+  6.2 Run `python manage.py init_multivendor_demo` to initialize the multivendor demo, if needed.
+  6.3 Run `python manage.py collectstatic` to collect all static files to /var/static/, if needed.
+  6.4 Run `python manage.py runserver 0.0.0.0:8000` to start the server
+
+7.0 Doned
+
 ## Updating requirements
 
 This project uses Prequ for requirements management.  To make changes to
