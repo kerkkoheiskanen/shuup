@@ -40,8 +40,13 @@ SHUUP_HOME_CURRENCY = env('SHOP_CURRENCY', default='USD')
 
 ALLOWED_HOSTS = env('ALLOWED_HOSTS', default='*').split(',')
 
-EMAIL_CONFIG = env.email_url('EMAIL_URL', default='smtp://localhost:25')
-vars().update(EMAIL_CONFIG)
+
+if env('EMAIL_URL', default=None):
+    EMAIL_CONFIG = env.email_url('EMAIL_URL')
+    vars().update(EMAIL_CONFIG)
+else:
+    EMAIL_FILE_PATH = os.path.join(BASE_DIR, 'var', 'emails')
+    EMAIL_BACKEND = 'django.core.mail.backends.filebased.EmailBackend'
 
 
 BASE_APPS = [
@@ -110,7 +115,7 @@ INSTALLED_APPS = BASE_APPS + [
     'shuup.gdpr',
     'shuup_logging',
     'shuup.testing',
-    'shuup_messages',   
+    'shuup_messages',
 
     # Externals
     'raven.contrib.django.raven_compat',
