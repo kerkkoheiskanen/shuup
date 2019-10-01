@@ -242,6 +242,7 @@ SHUUP_PROVIDES_BLACKLIST = {
         "shuup.admin.modules.support:ShuupSupportModule",
         "shuup.testing.modules.sample_data:SampleDataAdminModule",
         "shuup.testing.modules.demo:DemoModule",
+        "shuup.testing.modules.mocker:TestingAdminModule,"
     ],
     "admin_order_section": [
         "shuup.admin.modules.orders.sections:BasicDetailsOrderSection",
