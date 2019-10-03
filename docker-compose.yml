@@ -1,4 +1,4 @@
-version: '3.7'
+version: "3.7"
 services:
     postgres:
         image: postgres:11.5
@@ -28,7 +28,7 @@ services:
             - sandbox-node-modules-volume:/app/node_modules/
             - sandbox-static-volume:/app/var/static/
             - sandbox-media-volume:/app/var/media/
-            - <YOUR shuup-packages PATH HERE>:/shuup-packages/
+            - ../shuup-packages/:/shuup-packages/
         ports:
             - "127.0.0.1:8000:8000"
         depends_on:

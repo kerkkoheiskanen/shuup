@@ -5,7 +5,7 @@ RUN mkdir /shuup-packages
 RUN mkdir /app
 WORKDIR /app
 
-# We really should just make a image that we pull from somewhere
+# We really should just make an image that we pull from somewhere
 RUN curl -sL https://deb.nodesource.com/setup_11.x | bash -
 RUN apt-get update && apt-get install -y \
     mysql-client \
