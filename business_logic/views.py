@@ -12,3 +12,14 @@ from shuup.front.views.checkout import CheckoutViewWithLoginAndRegister
 
 class CheckoutViewWithLoginAndRegisterVertical(CheckoutViewWithLoginAndRegister):
     process_class = VerticalCheckoutProcess
+
+    phase_specs = [
+        "shuup.front.checkout.checkout_method:CheckoutMethodPhase",
+        "shuup.front.checkout.checkout_method:RegisterPhase",
+        "shuup.front.checkout.addresses:AddressesPhase",
+        "shuup_rewards_multivendor.checkout.RewardsPointsPhase",
+        "shuup.front.checkout.methods:MethodsPhase",
+        "shuup.front.checkout.methods:ShippingMethodPhase",
+        "shuup.front.checkout.methods:PaymentMethodPhase",
+        "shuup.front.checkout.confirm:ConfirmPhase",
+    ]
