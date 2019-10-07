@@ -70,7 +70,7 @@ rauth==0.7.3              # via python-quickbooks
 raven==6.10.0
 requests==2.21.0
 setuptools-gitver==1.1.0  # via shuup-cms-blog, shuup-definite-theme, shuup-megastore-theme, shuup-product-comparison, shuup-product-reviews, shuup-rewards-multivendor, shuup-stripe-subscriptions, shuup-subscriptions, shuup-wishlist, shuup-yaml
-shuup==1.9.10b11
+shuup==1.9.11b2
 shuup-can-taxes==0.4.1
 shuup-category-organizer==0.2.0
 shuup-cms-blog==0.3.0
@@ -85,9 +85,9 @@ shuup-product-comparison==0.2.8
 shuup-product-reviews==0.3.7
 shuup-quickbooks==0.1.2
 shuup-rewards-multivendor==1.0.0
-shuup-stripe==0.9.5
+shuup-stripe==1.0.0
 shuup-stripe-connect==0.1.1
-shuup-stripe-subscriptions==1.4.2
+shuup-stripe-subscriptions==1.5.0
 shuup-subscriptions==2.2.4
 shuup-typography==1.0.0
 shuup-us-taxes==0.7.2
@@ -96,7 +96,7 @@ shuup-xtheme-extra-layouts==0.9.3
 shuup-yaml==1.0.1b2
 simplejson==3.16.0        # via django-rest-swagger, python-quickbooks
 six==1.12.0               # via html5lib, keyrings-alt, python-dateutil, python-memcached, python-quickbooks, shuup
-stripe==1.84.2            # via shuup-stripe, shuup-stripe-subscriptions
+stripe==2.37.2            # via shuup-stripe, shuup-stripe-subscriptions
 tinycss2==0.6.1           # via cairosvg, cssselect2, weasyprint
 toml==0.10.0              # via shuup
 unicodecsv==0.14.1        # via shuup
