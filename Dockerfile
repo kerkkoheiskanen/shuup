@@ -12,6 +12,7 @@ RUN apt-get update && apt-get install -y \
     nodejs
 COPY wheels /app/wheels/
 RUN pip install prequ
+RUN pip install mysqlclient
 RUN pip install psycopg2
 
 COPY . /app/

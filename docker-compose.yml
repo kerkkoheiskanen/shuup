@@ -10,8 +10,21 @@ services:
         ports:
             - 127.0.0.1:5433:5432
         volumes:
-            - sandbox-postgres115-data-volume:/var/lib/mysql
+            - sandbox-postgres115-data-volume:/var/lib/postgresql/data/
         container_name: sandbox-postgres115
+
+    mysql:
+        image: mysql:5.7.25
+        environment:
+            MYSQL_ROOT_PASSWORD: sandbox
+            MYSQL_DATABASE: sandbox
+            MYSQL_PASSWORD: sandbox
+            MYSQL_USER: sandbox
+        ports:
+            - 127.0.0.1:3307:3306
+        volumes:
+            - sandbox-mysql5-data-volume:/var/lib/mysql
+        container_name: sandbox-mysql5
 
     memcached:
         image: memcached:1.5.17-alpine
@@ -20,9 +33,6 @@ services:
     django:
         build: .
         command: sh /app/entrypoint.sh
-        environment:
-            DATABASE_URL: postgres://sandbox:sandbox@sandbox-postgres115/sandbox
-            STATIC_ROOT: /app/var/static/
         volumes:
             - .:/app
             - sandbox-node-modules-volume:/app/node_modules/
@@ -33,11 +43,13 @@ services:
             - "127.0.0.1:8000:8000"
         depends_on:
             - postgres
+            - mysql
             - memcached
         container_name: sandbox
 
 volumes:
         sandbox-postgres115-data-volume:
+        sandbox-mysql5-data-volume:
         sandbox-media-volume:
         sandbox-static-volume:
         sandbox-node-modules-volume:
