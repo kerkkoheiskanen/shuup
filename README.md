@@ -86,7 +86,7 @@ If you are not seeing styles after running the server. Make sure you have run `$
 
 4. Run `$ docker-compose up --build`.
 
-5. Run `$ docker exec -it sandbox bash`
+5. Run `$ docker exec -it sandbox bash` to go inside the docker container shell
 
     5.1. Run `$ bash update-dev-project.sh shuup-packages` inside the container to install required packages from `requirements.txt` file and local `shuup-packages` directory.
 
@@ -94,7 +94,7 @@ If you are not seeing styles after running the server. Make sure you have run `$
 
 6. Setup environment variables if needed. Copy the content of the `.env.template-docker` file to a new `.env` file and edit it if necessary (for example by choosing MySQL over PostgreSQL database on the `DATABASE_URL` line).
 
-7. Django stuff
+7. Django stuff. Commands should be ran inside the docker container shell (check step number 5)
 
     7.1. Run `$ python manage.py migrate` to prime the database.
 
