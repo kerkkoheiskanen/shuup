@@ -3,6 +3,9 @@ ENV PYTHONUNBUFFERED 1
 
 RUN mkdir /shuup-packages
 RUN mkdir /app
+RUN mkdir /app/var
+RUN mkdir /app/var/media
+RUN mkdir /app/var/static
 WORKDIR /app
 
 # We really should just make an image that we pull from somewhere
@@ -16,3 +19,4 @@ RUN pip install mysqlclient
 RUN pip install psycopg2
 
 COPY . /app/
+COPY var/media /app/var/media/

@@ -20,7 +20,7 @@ and the Licensee.
 1. Create folder for the application like `/project`
 2. Under that create `/var` and `/venv`
 3. Clone this repo under `/project` as `app`
-  ```bash
+  ```sh
   $ git clone git@github.com:shuup/shuup-sandbox.git app
   ```
 4. Setup environment variables
@@ -82,37 +82,39 @@ If you are not seeing styles after running the server. Make sure you have run `$
 
 2. Place the main Shuup repository and all the Shuup Addons repositories you need in the `shuup-packages` folder. You can manually copy the required files and packages, but generally it's best to use the `git clone` command (`$ git clone git@github.com:shuup/shuup.git`, etc).
 
-3. Run `$ docker-compose up --build`.
+3. Add any media files (e.g. from production server) to `var/media`. They will be automatically copied to the appropriate place when you run `docker-compose` in the next step.
 
-4. Run `$ docker exec -it sandbox bash`
+4. Run `$ docker-compose up --build`.
 
-    4.1. Run `$ bash update-dev-project.sh shuup-packages` inside the container to install required packages from `requirements.txt` file and local `shuup-packages` directory.
+5. Run `$ docker exec -it sandbox bash`
 
-    4.2. Run `$ bash build_resources.sh shuup-packages` inside the container to build resources for Shuup addons.
+    5.1. Run `$ bash update-dev-project.sh shuup-packages` inside the container to install required packages from `requirements.txt` file and local `shuup-packages` directory.
 
-5. Setup environment variables if needed. Copy the content of the `.env.template-docker` file to a new `.env` file and edit it if necessary (for example by choosing MySQL over PostgreSQL database on the `DATABASE_URL` line).
+    5.2. Run `$ bash build_resources.sh shuup-packages` inside the container to build resources for Shuup addons.
 
-6. Django stuff
+6. Setup environment variables if needed. Copy the content of the `.env.template-docker` file to a new `.env` file and edit it if necessary (for example by choosing MySQL over PostgreSQL database on the `DATABASE_URL` line).
 
-    6.1. Run `$ python manage.py migrate` to prime the database.
+7. Django stuff
 
-    6.2. Run `$ python manage.py init_multivendor_demo` to initialize the multivendor demo, if needed.
+    7.1. Run `$ python manage.py migrate` to prime the database.
 
-    6.3. Run `$ python manage.py collectstatic` to collect all static files to `/var/static/`, if needed.
+    7.2. Run `$ python manage.py init_multivendor_demo` to initialize the multivendor demo, if needed.
 
-    6.4. Run `$ python manage.py runserver 0.0.0.0:8000` to start the server.
+    7.3. Run `$ python manage.py collectstatic` to collect all static files to `/var/static/`, if needed.
 
-7. Done.
+    7.4. Run `$ python manage.py runserver 0.0.0.0:8000` to start the server.
+
+8. Done.
 
 
 ## Updating requirements
 
 This project uses [Prequ](https://pypi.org/project/prequ/) for requirements management.  To make changes to installed packages or their versions, first install Prequ to the project environment with:
-```bash
+```sh
 $ pip install prequ
 ```
 To add/remove a requirement or update a requirement to a new version, edit `[prequ]` section in `setup.cfg` and run::
-```bash
+```sh
 $ prequ update
 ```
 This updates all `requirements*.txt` files and also builds new wheel
