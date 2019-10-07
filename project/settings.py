@@ -117,6 +117,7 @@ INSTALLED_APPS = BASE_APPS + [
     'shuup.testing',
     'shuup_messages',
     'shuup_rewards_multivendor',
+    'shuup_vendor_plans',
 
     # Externals
     'raven.contrib.django.raven_compat',
