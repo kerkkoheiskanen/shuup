@@ -88,6 +88,8 @@ If you are not seeing styles after running the server. Make sure you have run `$
 
     4.1. Run `$ bash update-dev-project.sh shuup-packages` inside the container to install required packages from `requirements.txt` file and local `shuup-packages` directory.
 
+    4.2. Run `$ bash build_resources.sh shuup-packages` inside the container to build resources for Shuup addons.
+
 5. Setup environment variables if needed. Copy the content of the `.env.template-docker` file to a new `.env` file and edit it if necessary (for example by choosing MySQL over PostgreSQL database on the `DATABASE_URL` line).
 
 6. Django stuff
