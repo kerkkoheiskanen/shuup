@@ -84,7 +84,7 @@ shuup-paypal-capture==0.0.2
 shuup-product-comparison==0.2.8
 shuup-product-reviews==0.3.7
 shuup-quickbooks==0.1.2
-shuup-rewards-multivendor==1.0.0
+shuup-rewards-multivendor==1.0.1
 shuup-stripe==1.0.0
 shuup-stripe-connect==0.1.1
 shuup-stripe-subscriptions==1.5.1
