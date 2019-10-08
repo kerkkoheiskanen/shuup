@@ -91,7 +91,7 @@ shuup-stripe-subscriptions==1.5.1
 shuup-subscriptions==2.2.5
 shuup-typography==1.0.0
 shuup-us-taxes==0.7.2
-shuup-vendor-plans==0.2.2
+shuup-vendor-plans==0.2.3
 shuup-wishlist==0.4.10
 shuup-xtheme-extra-layouts==0.9.3
 shuup-yaml==1.0.1b2
