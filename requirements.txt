@@ -70,7 +70,7 @@ rauth==0.7.3              # via python-quickbooks
 raven==6.10.0
 requests==2.21.0
 setuptools-gitver==1.1.0  # via shuup-cms-blog, shuup-definite-theme, shuup-megastore-theme, shuup-product-comparison, shuup-product-reviews, shuup-rewards-multivendor, shuup-stripe-subscriptions, shuup-subscriptions, shuup-wishlist, shuup-yaml
-shuup==1.9.11b3
+shuup==1.9.11b6
 shuup-can-taxes==0.4.1
 shuup-category-organizer==0.2.0
 shuup-cms-blog==0.3.0
