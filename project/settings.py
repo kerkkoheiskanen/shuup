@@ -251,9 +251,6 @@ SHUUP_PROVIDES_BLACKLIST = {
         "shuup.testing.modules.demo:DemoModule",
         "shuup.testing.modules.mocker:TestingAdminModule,"
     ],
-    "admin_order_section": [
-        "shuup.admin.modules.orders.sections:BasicDetailsOrderSection",
-    ],
     "service_provider_admin_form": [
         "shuup.testing.service_forms:PseudoPaymentProcessorForm",
         "shuup.testing.service_forms:PaymentWithCheckoutPhaseForm",
@@ -271,6 +268,9 @@ SHUUP_PROVIDES_BLACKLIST = {
     ],
     "admin_contact_edit_toolbar_button": [
         "shuup.testing.modules.mocker.toolbar:MockContactToolbarButton",
+    ],
+    "admin_shop_edit_toolbar_button": [
+        "shuup.testing.modules.mocker.toolbar:MockShopToolbarButton",
     ],
     "admin_product_toolbar_action_item": [
         "shuup.testing.modules.mocker.toolbar:MockProductToolbarActionItem",
