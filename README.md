@@ -44,6 +44,8 @@ project
     venv (project virtual environment if you are not using pyenv)
 shuup-packages
     shuup (https://github.com/shuup/shuup)
+    shuup-api (https://github.com/shuup/shuup-api)
+    shuup-rest-api (https://github.com/shuup/shuup-rest-api)
     shuup-category-organizer (https://github.com/shuup/shuup-category-organizer)
     shuup-cms-blog (https://github.com/shuup/shuup-cms-blog)
     shuup-mailchimp (https://github.com/shuup/shuup-mailchimp)

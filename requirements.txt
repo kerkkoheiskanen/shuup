@@ -8,10 +8,11 @@ babel==2.5.3              # via shuup
 cairocffi==0.9.0          # via cairosvg, weasyprint
 cairosvg==2.2.1           # via weasyprint
 certifi==2018.11.29       # via requests
-cffi==1.11.5              # via cairocffi, weasyprint
+cffi==1.11.5              # via cairocffi, cryptography, weasyprint
 chardet==3.0.4            # via requests
 coreapi==2.3.3            # via django-rest-swagger, openapi-codec
 coreschema==0.0.4         # via coreapi
+cryptography==2.8         # via secretstorage
 cssselect2==0.2.1         # via cairosvg, weasyprint
 defusedxml==0.5.0         # via cairosvg
 dictdiffer==0.8.0         # via shuup-logging
@@ -30,11 +31,11 @@ django-parler==1.9.2      # via django-parler-rest, shuup
 django-parler-rest==1.4.2  # via shuup
 django-polymorphic==2.0.3  # via django-filer, shuup
 django-registration-redux==1.8  # via shuup
-django-rest-swagger==2.1.2  # via shuup
+django-rest-swagger==2.1.2  # via shuup-api
 django-reversion==2.0.13  # via shuup
 django-timezone-field==2.1  # via shuup
-djangorestframework==3.5.4  # via django-parler-rest, django-rest-swagger, shuup
-djangorestframework-jwt==1.11.0  # via shuup
+djangorestframework==3.5.4  # via django-parler-rest, django-rest-swagger, shuup, shuup-api
+djangorestframework-jwt==1.11.0  # via shuup-api
 easy-thumbnails==2.5      # via django-filer
 entrypoints==0.3          # via keyring
 et-xmlfile==1.0.1         # via openpyxl
@@ -47,6 +48,7 @@ html5lib==1.0.1           # via weasyprint
 idna==2.8                 # via requests
 itypes==1.1.0             # via coreapi
 jdcal==1.4                # via openpyxl
+jeepney==0.4.1            # via secretstorage
 jinja2==2.8.1             # via coreschema, django-jinja, shuup
 jsonfield==2.0.2          # via shuup
 keyring==17.1.1           # via shuup
@@ -69,8 +71,10 @@ pyyaml==3.13
 rauth==0.7.3              # via python-quickbooks
 raven==6.10.0
 requests==2.21.0
+secretstorage==3.1.1      # via keyring
 setuptools-gitver==1.1.0  # via shuup-cms-blog, shuup-definite-theme, shuup-megastore-theme, shuup-product-comparison, shuup-product-reviews, shuup-rewards-multivendor, shuup-stripe-subscriptions, shuup-subscriptions, shuup-wishlist, shuup-yaml
-shuup==1.9.11b6
+shuup==1.10.0
+shuup-api==1.0.0          # via shuup, shuup-rest-api
 shuup-can-taxes==0.4.1
 shuup-category-organizer==0.2.0
 shuup-cms-blog==0.3.0
@@ -84,6 +88,7 @@ shuup-paypal-capture==0.0.2
 shuup-product-comparison==0.2.8
 shuup-product-reviews==0.3.7
 shuup-quickbooks==0.1.2
+shuup-rest-api==1.0.0     # via shuup
 shuup-rewards-multivendor==1.0.1
 shuup-stripe==1.0.0
 shuup-stripe-connect==0.1.1
@@ -96,7 +101,7 @@ shuup-wishlist==0.4.10
 shuup-xtheme-extra-layouts==0.9.3
 shuup-yaml==1.0.1b2
 simplejson==3.16.0        # via django-rest-swagger, python-quickbooks
-six==1.12.0               # via html5lib, keyrings-alt, python-dateutil, python-memcached, python-quickbooks, shuup
+six==1.12.0               # via cryptography, html5lib, keyrings-alt, python-dateutil, python-memcached, python-quickbooks, shuup
 stripe==2.37.2            # via shuup-stripe, shuup-stripe-subscriptions
 tinycss2==0.6.1           # via cairosvg, cssselect2, weasyprint
 toml==0.10.0              # via shuup

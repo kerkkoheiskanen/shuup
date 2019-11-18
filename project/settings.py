@@ -95,6 +95,8 @@ INSTALLED_APPS = BASE_APPS + [
     'shuup.regions',
     'shuup.importer',
     'shuup.default_importer',
+    'shuup_api',
+    'shuup_rest_api',
     'shuup_us_taxes',
     'shuup_can_taxes',
     'shuup_stripe',
@@ -113,6 +115,7 @@ INSTALLED_APPS = BASE_APPS + [
     'shuup_typography',
     'shuup_paypal_capture',
     'shuup.gdpr',
+    'shuup.tasks',
     'shuup_logging',
     'shuup.testing',
     'shuup_messages',
@@ -338,7 +341,7 @@ REST_FRAMEWORK = {
         'rest_framework_jwt.authentication.JSONWebTokenAuthentication',
     ),
     'DEFAULT_PERMISSION_CLASSES': (
-        'shuup.api.permissions.ShuupAPIPermission',
+        'shuup_api.permissions.ShuupAPIPermission',
     )
 }
 

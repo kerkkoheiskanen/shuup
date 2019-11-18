@@ -29,7 +29,7 @@ def not_vendor(view):
 
 
 urlpatterns = [
-    url(r'^api/', include('shuup.api.urls')),
+    url(r'^api/', include('shuup_api.urls')),
     url(
         r"^sa/products/(?P<pk>\d+)/media/add/$",
         ProductMediaBulkAdderView.as_view(),
